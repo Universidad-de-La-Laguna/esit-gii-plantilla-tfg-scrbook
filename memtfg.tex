@@ -1,34 +1,49 @@
-\documentclass[spanish,a4paper,12pt,oneside]{scrbook}
+\documentclass[a4paper,12pt,oneside]{scrbook}
 
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{alltt}
+\usepackage[onehalfspacing]{setspace}
+
+% TODO: Indentación del primer parrafo
+% TODO: Imagenes vectoriales: https://creativecommons.org/mission/downloads/
+% TODO: Título mas parecido al original
+
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{unicode-math}   % Incluye Latin Modern Math
+
+\setmainfont[Ligatures=TeX]{Latin Modern Sans}
+\setsansfont[Ligatures=TeX]{Latin Modern Sans}
+\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\setmathfont{Latin Modern Math}
+
+\recalctypearea
+
+\usepackage[spanish,es-ucroman,es-noenumerate,es-tabla]{babel}
 
 \usepackage[ruled,vlined,commentsnumbered,linesnumbered,inoutnumbered,titlenotnumbered,noend]{algorithm2e}
 \SetKwRepeat{Do}{do}{while}
 
-\usepackage{multirow}
-\usepackage{array} 
-\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{bigstrut}
-\usepackage{booktabs}
+%\usepackage{alltt}
+%\usepackage{multirow}
+%\usepackage{array} 
+%\usepackage{bigstrut}
+%\usepackage{booktabs}
 \usepackage{caption}
-\usepackage{enumitem,lipsum}
-\usepackage{microtype}
+%\usepackage{enumitem,lipsum}
+\usepackage{float}
+%\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
 \usepackage{natbib}
 \usepackage{pdflscape}
 \usepackage{rotating}
 \usepackage{subcaption}
-\usepackage{ctable}
-\usepackage[hidelinks]{hyperref}
-\usepackage{enumerate}
-\usepackage{gensymb}
-\usepackage{eurosym}
-\usepackage{xcolor}
+%\usepackage{ctable}
+%\usepackage{enumerate}
+%\usepackage{gensymb}
+%\usepackage{eurosym}
 \usepackage{tabu}
 
-\usepackage{lineno}
+%\usepackage{lineno}
 %\\linenumbers
 %\setlength\linenumbersep{5pt}
 %\renewcommand\linenumberfont{\normalfont\tiny\sffamily\color{gray}}
@@ -57,7 +72,6 @@
 {\begin{list}{}{\setlength{\leftmargin}{1em}}\item[\hskip\labelsep \bfseries Palabras clave:]}
 {\end{list}}
 
-\usepackage{bera}% optional: just to have a nice mono-spaced font
 \usepackage{listings}
 \usepackage{xcolor}
 
@@ -185,7 +199,10 @@ Agradecimientos
 \hspace{3mm}
 
 \begin{large}
-XXXXX
+XXX
+XXX
+XXX
+XXX
 \end{large}
 
 }
