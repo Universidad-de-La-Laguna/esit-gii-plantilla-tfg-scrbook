@@ -68,22 +68,34 @@
 % \usepackage[style=numeric-comp,sorting=none,backend=biber]{biblatex}
 \addbibresource{references.bib}
 
-\usepackage{array} 
-\usepackage{booktabs}
 \usepackage{caption}
 \usepackage{enumitem}
 \usepackage{float}
 \usepackage{gensymb}
 \usepackage{graphicx}
 \usepackage{lipsum}
-\usepackage{longtable}
 \usepackage{microtype}
-\usepackage{multirow}
 \usepackage{pdflscape}
 \usepackage{rotating}
 \usepackage{subcaption}
-\usepackage{tabularx}
 \usepackage[table]{xcolor}
+
+% Tablas
+\usepackage{array} 
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{tabularx}
+% Definir columnas para alineación a la derecha o centro y ajuste automático
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+% Definir tipos de columnas en modo matemático
+% Ver pag. 3 en la documentación del paquete array:
+\newcolumntype{M}{>{$}c<{$}}
+\newcolumntype{L}{>{$}l<{$}}
+\newcolumntype{N}{>{$}r<{$}}
+% Distancia entre filas
+\renewcommand*{\arraystretch}{1.5}
 
 % Código con coloreado de sintaxis
 \usepackage{scrhack}            % Para evitar un warning sobre \float@addtolist
