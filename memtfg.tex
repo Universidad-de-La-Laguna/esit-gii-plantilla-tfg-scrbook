@@ -49,7 +49,7 @@
 
 % Fuente small caps
 % Necesario porque Latin Modern Sans no incluye estilo small caps
-\renewcommand{\textsc}{\lmscfont}
+\renewcommand{\textsc}[1]{{\lmscfont #1}}
 
 % Configuración de listas no numeradas
 \setkomafont{itemizelabel}{\lmfont}
