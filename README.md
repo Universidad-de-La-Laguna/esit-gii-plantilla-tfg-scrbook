@@ -41,6 +41,8 @@ Entre otros, la plantilla incluye los siguientes paquetes que pueden ser útiles
  
  * [longtable](https://ctan.org/pkg/longtable) — Proporciona un entorno para crear tablas que pueden abarcar múltiples páginas. Ideal para tablas extensas que no caben en una sola página.
 
+ * [multirow](https://ctan.org/pkg/multirow) Permite crear celdas en tablas que abarcan múltiples filas. Útil para crear tablas más complejas.
+
  * [tabularx](https://ctan.org/pkg/tabularx) — Extiende el entorno tabular con soporte para ancho de columna automático. Permite crear tablas que se ajustan al ancho total de la página.
 
 ### Estilos
