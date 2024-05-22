@@ -2,7 +2,7 @@
 \KOMAoptions{
     chapterprefix=true,
     parskip=half,
-    % captions=tableheading,
+    captions=tableheading,
     draft=false
 }
 
@@ -12,7 +12,7 @@
 % \setlength\linenumbersep{5pt}
 % \renewcommand\linenumberfont{\normalfont\tiny\sffamily\color{gray}}
 
-\usepackage[spanish,es-ucroman,es-noenumerate,es-tabla]{babel}
+\usepackage[spanish,es-ucroman,es-nolists,es-tabla]{babel}
 \usepackage[hidelinks]{hyperref}
 
 \renewcommand{\listtablename}{Índice de tablas}    
@@ -40,18 +40,33 @@
 \usepackage{amsmath}
 \usepackage{unicode-math}   % Incluye Latin Modern Math
 
-\setmainfont[Ligatures=TeX]{Latin Modern Sans}
-\setsansfont[Ligatures=TeX]{Latin Modern Sans}
-\setmonofont[Scale=MatchLowercase]{Source Code Pro}
-\setmathfont{Latin Modern Math}
+\setmainfont{Latin Modern Sans}[Ligatures=TeX]
+\setsansfont{Latin Modern Sans}[Ligatures=TeX]
+\setmonofont{Source Code Pro}[Scale=MatchLowercase]
+% \setmonofont[Scale=MatchLowercase]{Fira Mono}
+\newfontfamily{\lmfont}{Latin Modern Roman}
+\newfontfamily{\lmscfont}{Latin Modern Roman Caps}
+
+% Fuente small caps
+% Necesario porque Latin Modern Sans no incluye estilo small caps
+\renewcommand{\textsc}{\lmscfont}
+
+% Configuración de listas no numeradas
+\setkomafont{itemizelabel}{\lmfont}
+\renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemiii}{$\diamond$}
+\renewcommand{\labelitemiv}{$\triangleright$}
+
+% Citas
+\usepackage{csquotes}
+\renewcommand{\mkbegdispquote}[2]{\itshape}
+\renewcommand{\mkenddispquote}[2]{#1\upshape#2}
 
 % Bibliografía
-\usepackage{csquotes}
-% APA
 \usepackage[style=apa,sorting=ynt,backend=biber]{biblatex}
 % % Numérica
 % \usepackage[style=numeric-comp,sorting=none,backend=biber]{biblatex}
-\bibliography{references}
+\addbibresource{references.bib}
 
 \usepackage{array} 
 \usepackage{booktabs}
@@ -74,21 +89,11 @@
 \usepackage{listings}
 \input{local/listings}          % Estilo y definiciones para lenguajes adicionales
 
-% Descripción de algoritmos
-\usepackage[
-    ruled,              % Dibuja una línea horizontal sobre y bajo el bloque del algoritmo
-    vlined,             % Dibuja líneas verticales al inicio y al final de los bloques de control (if-else, while, for, etc.)
-    commentsnumbered,   % Numera los comentarios dentro del algoritmo
-    linesnumbered,      % Numera cada línea del algoritmo
-    inoutnumbered,      % Numera las líneas de entrada y salida
-    titlenotnumbered,   % No numera el título del algoritmo
-    noend               % Omite los comandos 'end' (\EndWhile, \EndFor, \EndIf, etc.)
-]{algorithm2e}
-%% Definición de la estructura Do..while
-% \Do{this end condition}{
-%     do these things\;
-% }
-\SetKwRepeat{Do}{do}{while}
+% Descripción de algoritmos en pseudocódigo
+\usepackage[chapter]{algorithm}
+\usepackage{algpseudocodex}
+\floatname{algorithm}{Algoritmo}
+\captionsetup[algorithm]{labelfont=bf, labelsep=default}
 
 \newenvironment{abstract}[1][\abstractname]{
     \cleardoublepageusingstyle{empty}
@@ -108,6 +113,10 @@
     \mbox{\chapappifchapterprefix{\nobreakspace}\thechapter
     \IfUsePrefixLine{}{\enskip}}}
 \renewcommand{\chapterheadmidvskip}{\vskip 0pt}
+
+% Formato de los títulos en figuras y tablas
+\renewcommand*{\figureformat}{\figurename~\thefigure}
+\renewcommand*{\tableformat}{\tablename~\thetable}
 
 % Redefinición de las entradas de los capítulos en la tabla de contenidos
 % para que aparezca el prefijo.
@@ -372,7 +381,8 @@ Keyword1, Keyword2, Keyword3,...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
 
-\printbibliography
+\defbibnote{note}{Las siguientes referencias bibliográficas se presentan en orden alfabético por autor. Las referencias con más de un autor aparecen ordenadas en base al primero de los mismos.\par\bigskip}
+\printbibliography[prenote=note]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}

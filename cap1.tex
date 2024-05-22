@@ -1,33 +1,50 @@
 \chapter{Introducción}
 \label{ch:intro}
 
-\section{Sección Uno}
-\subsection{Apartado Uno}
+\noindent Cualquier capítulo puede tener múltiples apartados, como el \autoref{sec:apartado1} o el \autoref{sec:sección2} de este mismo capítulo.
+
+También está el \autoref{sec:ch2_1} del \autoref{ch:dos} que tiene la \autoref{fig:other}.
+
+Es buena idea usar \texttt{\textbackslash{noindent}} al principio del primer párrafo, tras el encabezado de una sección o capítulo, para desactivar la sangría temporalmente.
+
+\section{Listas de elementos}
 \label{sec:apartado1}
 
-\noindent Texto del \autoref{sec:apartado1}. \lipsum[1]
+\noindent Esta la lista de elementos del \autoref{sec:apartado1}:
 
 \begin{itemize}
     \item Item 1
+    \begin{itemize}
+        \item Item 1
+        \item Item 2
+        \item Item 3
+        \item Item 4
+    \end{itemize}
+    
     \item Item 2
     \item Item 3
     \item Item 4
 \end{itemize}
 
-Más texto del \autoref{sec:apartado1} antes del \autoref{sec:sección2}. \lipsum[2]
-
-\section{Sección Dos}
+\section{Enumeraciones}
 \label{sec:sección2}
+
+\noindent Esto es una lista enumerada, que puede estar relacionada con la \autoref{fig:intro}
 
 \begin{enumerate}
     \item Item 1
+    \begin{enumerate}
+        \item Item 1
+        \item Item 2
+        \item Item 3
+    \end{enumerate}
     \item Item 2
     \item Item 3
 \end{enumerate}
 
-\section{Sección Tres}
+\section{Figuras y tablas}
 
-\noindent Bla, bla en la \autoref{fig:intro}, bla... \lipsum[3]
+\noindent En la \autoref{fig:intro} se puede ver una figura de ejemplo. Es importante referenciar siempre las figuras y las tablas en el texto.
 
 \begin{figure}[htb]
    \centering
@@ -36,8 +53,26 @@ Más texto del \autoref{sec:apartado1} antes del \autoref{sec:sección2}. \lipsu
    \label{fig:intro}
 \end{figure}
 
-\lipsum[4]
+La \autoref{tbl:presupuesto} en el \autoref{ch:presupuesto} es un ejemplo de tabla hecha con el paquete \texttt{tabularx}.
 
-\section{Sección Cuatro}
+\section{Código y algoritmos}
 
-\noindent \lipsum[5-6]
+\noindent En el \autoref{apx:1} se pueden observar varios ejemplos de entornos para describir algoritmos y código.
+
+\section{Citas}
+
+\noindent Las referencias bibliográficas se deben indicar en el archivo \texttt{references.bib} y se citan en el texto. Las referencias no citadas no aparecerán en el apartado de la bibliografía.
+
+Las citas pueden ser entre paréntesis \parencite{examplearticle} o \emph{en línea}, como la de \cite{examplegithub}.
+
+Las  reglas para citar \parencite{ulllibguide} permiten citar cualquier cosa: artículos de investigación, libros, entradas de la Wikipedia, blogs, vídeos de Youtube o repositorios de GitHub, entre otros. 
+
+En el \autoref{ch:cuatro} se puede ver otro tipo de citas, usando el paquete \texttt{csquotes}, donde se traslada de forma literal una porción del texto original al documento.
+ 
+\section{Otra sección...}
+
+\noindent \lipsum[1]
+
+\subsection{Con subsección...}
+
+\noindent \lipsum[2]

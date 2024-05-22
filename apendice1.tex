@@ -1,8 +1,10 @@
 \chapter{Título del Apéndice 1}
-\label{appendix:1}
+\label{apx:1}
 
-\section{Algoritmo XXX}
-\label{sec:XXX}
+\section{Algoritmo WWW}
+\label{sec:WWW}
+
+\noindent Ejemplo de código con coloreado de sintaxis.
 
 \begin{lstlisting}[language=C++]
 #include <iostream>
@@ -15,13 +17,36 @@ int main()
 }
 \end{lstlisting}
 
+\section{Archivo XXX}
+\label{sec:XXX}
+
+\noindent Ejemplo de JSON usando el mismo entorno de coloreado de sintaxis.
+
+\begin{lstlisting}
+{
+    "nombre": "John Doe",
+    "edad": 30,
+    "ciudad": "Nueva York",
+    "hobbies": [
+        "lectura",
+        "jardinería",
+        "ciclismo"
+    ],
+    "empleo": {
+        "título": "Ingeniero de Software",
+        "empresa": "TechCorp"
+    }
+}
+\end{lstlisting}
+ 
 \section{Algoritmo YYY}
-\label{sec:YYY}
+\label{Apendice1:YYY}
+
+\noindent El clásico entorno \texttt{verbatim}, sin coloreado pero con fuente monoespaciada.
 
 \begin{center}
 \begin{footnotesize}
 \begin{verbatim}
-
 
 /***********************************************************************************
  *
@@ -45,27 +70,21 @@ int main()
 \section{Algoritmo ZZZ}
 \label{Apendice1:ZZZ}
 
-\begin{center}
-\begin{footnotesize}
-\begin{verbatim}
+\noindent Ejemplo de entorno para describir algoritmos en pseudocódigo.
 
+\begin{algorithm}
+    \caption{Cálculo del factorial de un número}\label{alg:factorial}
+    \begin{algorithmic}[1]
+        \State \textbf{Entrada:} Un entero $n$
+        \State \textbf{Salida:} El factorial de $n$
+        \Function{Factorial}{$n$}\Comment{El factorial de n}
+            \If{$n \leq 1$}
+                \State \Return $1$\Comment{El factorial de 0 o 1 es 1}
+            \Else
+                \State \Return $n \times$ \Call{Factorial}{n-1}
+            \EndIf
+        \EndFunction
+    \end{algorithmic}
+\end{algorithm}
 
-/***********************************************************************************
- *
- * Fichero .h
- *
- ***********************************************************************************
- *
- * AUTORES
- *
- * FECHA
- *
- * DESCRIPCION
- *
- *
- ************************************************************************************/
- 
-\end{verbatim}
-\end{footnotesize}
-\end{center}
-
+Otra forma de describir algoritmos es utilizar entornos \texttt{lstlisting} y emplear una sintaxis de pseudocódigo similar a alguno de los lenguajes soportados por este paquete, como Python o Pascal.
