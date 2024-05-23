@@ -5,7 +5,7 @@
 
 También está el \autoref{sec:ch2_1} del \autoref{ch:dos} que tiene la \autoref{fig:other}.
 
-Es buena idea usar \texttt{\textbackslash{noindent}} al principio del primer párrafo, tras el encabezado de una sección o capítulo, para desactivar la sangría temporalmente.
+Es buena idea usar \verb|\noindent| al principio del primer párrafo, tras el encabezado de una sección o capítulo, para desactivar la sangría temporalmente.
 
 \section{Listas de elementos}
 \label{sec:apartado1}
@@ -53,11 +53,12 @@ Es buena idea usar \texttt{\textbackslash{noindent}} al principio del primer pá
    \label{fig:intro}
 \end{figure}
 
-La \autoref{tbl:presupuesto} en el \autoref{ch:presupuesto} es un ejemplo de tabla hecha con el paquete \texttt{tabularx}.
+La \autoref{tbl:presupuesto} en el \autoref{ch:presupuesto} es un ejemplo de tabla hecha con el paquete \verb|tabularx|.
 
-Al crear tablas, figuras u otros elementos flotantes es aconsejable indicar siempre los especificadores de ubicación \texttt{[htbp]}, tal y como se hace en los ejemplos de esta plantilla. De esta forma \LaTeX{} intentará primero ponerlos en el lugar; si no puede, intentará ponerlos en la parte superior o inferior de la misma página y, en caso extremo, los pondrá en páginas especiales que solo contienen flotantes.
+Al crear tablas, figuras u otros elementos flotantes es aconsejable indicar siempre los especificadores de ubicación \verb|[htbp]|, tal y como se hace en los ejemplos de esta plantilla. De esta forma \LaTeX{} intentará primero ponerlos en el lugar; si no puede, intentará ponerlos en la parte superior o inferior de la misma página y, en caso extremo, los pondrá en páginas especiales que solo contienen flotantes.
 
-No es buena idea usar especificadores como \texttt{[h!]} o \texttt{[H]} para forzar una ubicación determinada. El motivo es que eso impide a \LaTeX{} buscar la mejor forma de componer el documento, pudiendo dar como resultado páginas que se ven muy raras --por ejemplo, dejando muchos huecos libres entre el texto--.
+No es buena idea usar especificadores como \verb|[!h]| o \verb|[H]| para forzar una ubicación determinada. El motivo es que eso impide a \LaTeX{} buscar la mejor forma de componer el documento, pudiendo dar como resultado páginas que se ven muy raras --por ejemplo, dejando muchos huecos libres entre el texto--.
+Solo se deben utilizar estos especificadores cuando es absolutamente necesario, como ocurre en el \autoref{ch:presupuesto}, donde interesa que las tablas del presupuesto aparezca juntas, en la posición preestablecida.
 
 \section{Código y algoritmos}
 
