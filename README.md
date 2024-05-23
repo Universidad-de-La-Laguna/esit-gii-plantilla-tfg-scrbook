@@ -21,9 +21,9 @@ Entre otros, la plantilla incluye los siguientes paquetes que pueden ser útiles
 
 ### Código
 
- * [listings](https://ctan.org/pkg/listings) — Proporciona un entorno para incluir código fuente con resaltado de sintaxis.
-
  * [algpseudocodex](https://ctan.org/pkg/algpseudocodex) — Proporciona entornos avanzados para describir algoritmos. Permite escribir pseudocódigo con numeración y resaltado.
+
+ * [listings](https://ctan.org/pkg/listings) — Proporciona un entorno para incluir código fuente con resaltado de sintaxis.
 
 ### Figuras
 
@@ -55,9 +55,9 @@ Entre otros, la plantilla incluye los siguientes paquetes que pueden ser útiles
 
 ### Otros
 
- * [siunitx](https://ctan.org/pkg/siunitx) — Proporciona símbolos utilizados en el sistema internacional de medida, como grados, minutos, segundos, ohmios, kilo, micro, julios y newtons, entre muchos otros.
-
  * [csquotes](https://ctan.org/pkg/csquotes) — Proporciona comandos avanzados para citar y formatear citas en múltiples lenguajes y estilos.
+
+ * [siunitx](https://ctan.org/pkg/siunitx) — Proporciona símbolos utilizados en el sistema internacional de medida, como grados, minutos, segundos, ohmios, kilo, micro, julios y newtons, entre muchos otros.
 
 ## Versiones
 
