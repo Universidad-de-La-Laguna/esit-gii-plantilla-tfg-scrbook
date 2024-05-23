@@ -12,7 +12,7 @@
 % \setlength\linenumbersep{5pt}
 % \renewcommand\linenumberfont{\normalfont\tiny\sffamily\color{gray}}
 
-\usepackage[spanish,es-ucroman,es-nolists,es-tabla]{babel}
+\usepackage[spanish,es-nolists,es-tabla]{babel}
 \usepackage[hidelinks]{hyperref}
 
 \renewcommand{\listtablename}{Índice de tablas}    
@@ -42,19 +42,18 @@
 \usepackage{amsmath}
 \usepackage{unicode-math}   % Incluye Latin Modern Math
 
-\setmainfont{Latin Modern Sans}[Ligatures=TeX]
+\setmainfont{Latin Modern Sans}[
+    Ligatures=TeX,
+    % Necesario porque Latin Modern Sans no incluye estilo small caps
+    SmallCapsFont=Latin Modern Roman Caps
+]
 \setsansfont{Latin Modern Sans}[Ligatures=TeX]
 \setmonofont{Source Code Pro}[Scale=MatchLowercase]
 % \setmonofont[Scale=MatchLowercase]{Fira Mono}
-\newfontfamily{\lmfont}{Latin Modern Roman}
-\newfontfamily{\lmscfont}{Latin Modern Roman Caps}
-
-% Fuente small caps
-% Necesario porque Latin Modern Sans no incluye estilo small caps
-\renewcommand{\textsc}[1]{{\lmscfont #1}}
+\newfontfamily{\lmromanfont}{Latin Modern Roman}
 
 % Configuración de listas no numeradas
-\setkomafont{itemizelabel}{\lmfont}
+\setkomafont{itemizelabel}{\lmromanfont}
 \renewcommand{\labelitemii}{$\circ$}
 \renewcommand{\labelitemiii}{$\diamond$}
 \renewcommand{\labelitemiv}{$\triangleright$}
@@ -73,13 +72,13 @@
 \usepackage{caption}
 \usepackage{enumitem}
 \usepackage{float}
-\usepackage{gensymb}
 \usepackage{graphicx}
 \usepackage{lipsum}
 \usepackage{microtype}
 \usepackage{pdflscape}
 \usepackage{rotating}
 \usepackage{subcaption}
+\usepackage{textcomp, gensymb}
 \usepackage[table]{xcolor}
 
 % Tablas
