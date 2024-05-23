@@ -13,7 +13,7 @@ La plantilla no funciona con el compilador pdfLaTex por el uso del paquete `font
 Las fuentes usadas y que deben estar instaladas son:
 
  * [lmodern](https://ctan.org/pkg/lm) — Latin Modern
- * [sourcecodepro](https://ctan.org/pkg/sourcecodepro) — **Source Code Pro**
+ * [sourcecodepro](https://ctan.org/pkg/sourcecodepro) — Source Code Pro
 
 ## Paquetes incluidos
 
