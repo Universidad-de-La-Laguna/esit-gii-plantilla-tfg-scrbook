@@ -55,7 +55,7 @@ Entre otros, la plantilla incluye los siguientes paquetes que pueden ser útiles
 
 ### Otros
 
- * [gensymb](https://ctan.org/pkg/gensymb) — Proporciona símbolos generales como grados, minutos y segundos.
+ * [siunitx](https://ctan.org/pkg/siunitx) — Proporciona símbolos utilizados en el sistema internacional de medida, como grados, minutos, segundos, ohmios, kilo, micro, julios y newtons, entre muchos otros.
 
  * [csquotes](https://ctan.org/pkg/csquotes) — Proporciona comandos avanzados para citar y formatear citas en múltiples lenguajes y estilos.
 
