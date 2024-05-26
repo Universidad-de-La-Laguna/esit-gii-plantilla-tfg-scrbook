@@ -2,11 +2,21 @@
 
 Esta plantilla de memoria de trabajo fin de grado se basa en la clase `scrbook` del paquete [KOMA-Script](https://ctan.org/pkg/koma-script). Este paquete ofrece más flexibilidad en el diseño de documentos y opciones de personalización que las clases estándares de LaTeX.
 
+## Versiones
+
+La plantilla se puede utilizar fácilmente en Overleaf utilizando la versión publicada en la galería:
+
+https://www.overleaf.com/latex/templates/ull-esit-gii-memoria-de-trabajo-de-fin-de-grado/djcchzsbgvvh
+
+También se puede descargar la última versión de la plantilla directamente desde GitHub:
+
+https://github.com/Universidad-de-La-Laguna/esit-gii-plantilla-tfg-scrbook
+
 ## LaTeX
 
 La plantilla está prepara para ser usada con LuaLaTex como compilador por defecto y Biber para la gestión de las referencias bibliográficas. Es posible que también funcione con XeLaTeX, pero solo ha sido probada con LuaLaTex. Por eso, para generar este documento, **se recomienda configurar el editor de LaTeX para que use LuaLaTeX**.
 
-La plantilla no funciona con el compilador pdfLaTex por el uso del paquete `fontspec` para gestionar las fuentes OpenType.
+La plantilla no funciona con pdfLaTex por el uso del paquete `fontspec` para gestionar las fuentes OpenType.
 
 ## Fuentes
 
@@ -58,9 +68,3 @@ Entre otros, la plantilla incluye los siguientes paquetes que pueden ser útiles
  * [csquotes](https://ctan.org/pkg/csquotes) — Proporciona comandos avanzados para citar y formatear citas en múltiples lenguajes y estilos.
 
  * [siunitx](https://ctan.org/pkg/siunitx) — Proporciona símbolos utilizados en el sistema internacional de medida, como grados, minutos, segundos, ohmios, kilo, micro, julios y newtons, entre muchos otros.
-
-## Versiones
-
-La última versión de esta plantilla está disponible en:
-
-https://github.com/Universidad-de-La-Laguna/esit-gii-plantilla-tfg-scrbook
