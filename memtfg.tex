@@ -12,7 +12,7 @@
 % \setlength\linenumbersep{5pt}
 % \renewcommand\linenumberfont{\normalfont\tiny\sffamily\color{gray}}
 
-\usepackage[spanish,es-nolists,es-tabla]{babel}
+\usepackage[spanish,es-tabla,es-noindentfirst]{babel}
 \usepackage[hidelinks]{hyperref}
 
 \renewcommand{\listtablename}{Índice de tablas}    
@@ -67,7 +67,7 @@
 \usepackage[style=apa,sorting=ynt,backend=biber]{biblatex}
 % % Numérica
 % \usepackage[style=numeric-comp,sorting=none,backend=biber]{biblatex}
-\addbibresource{references.bib}
+\addbibresource{referencias.bib}
 
 \usepackage{caption}
 \usepackage{enumitem}
@@ -103,7 +103,7 @@
 % Código con coloreado de sintaxis
 \usepackage{scrhack}            % Para evitar un warning sobre \float@addtolist
 \usepackage{listings}
-\input{local/listings}          % Estilo y definiciones para lenguajes adicionales
+\input{settings/listings}          % Estilo y definiciones para lenguajes adicionales
 
 % Descripción de algoritmos en pseudocódigo
 \usepackage[chapter]{algorithm}
@@ -122,6 +122,17 @@
 \newenvironment{keywords}[1][Keywords]
 {\vspace{7pt}\par\noindent\textup{\textbf{#1: }}\begin{upshape}}
 {\end{upshape}}
+
+\newcommand{\license}[2]{%
+\begin{center}
+    \begin{minipage}{0.8\textwidth}   
+        \begin{center}
+            \includegraphics[width=4.66cm]{#1}\\[12pt]
+            {\Large #2}
+        \end{center}
+    \end{minipage}
+\end{center}
+}
 
 % Formato de capítulos
 % Eliminar el punto y reducir el espacio entre el prefijo y el nombre del capítulo 
@@ -257,84 +268,39 @@
 \thispagestyle{empty}
 
 {\noindent\LARGE Licencia}
+\vspace{15mm}
 
 \textcolor{red}{Elige una licencia y elimina el testo de opciones.}
-
 \bigskip
+
 \textcolor{red}{• Si NO quiere permitir que se compartan las adaptaciones de tu obra y NO quieres permitir usos comerciales de tu obra, indica:}
 
-\begin{center}
-\includegraphics[width=4.66cm]{images/licenses/by-nc-nd.eu}
-\end{center}
+\license{images/licenses/by-nc-nd.eu}{© Esta obra está bajo una licencia de Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional.}
 
-\begin{large}
-© Esta obra está bajo una licencia de Creative Commons Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional.
-\end{large}
-
-\bigskip
-\bigskip
 \bigskip
 \textcolor{red}{• Si quiere permitir que se compartan las adaptaciones de tu obra mientras se comparta de la misma manera y NO quieres permitir usos comerciales de tu obra, indica:}
 
-\begin{center}
-\includegraphics[width=4.66cm]{images/licenses/by-nc-sa.eu}
-\end{center}
-
-\begin{large}
-© Esta obra está bajo una licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional.
-\end{large}
-
-\bigskip
-\bigskip
+\license{images/licenses/by-nc-sa.eu}{© Esta obra está bajo una licencia de Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional.}
+        
 \bigskip
 \textcolor{red}{• Si quiere permitir que se compartan las adaptaciones de tu obra y NO quieres permitir usos comerciales de tu obra, indica:}
 
-\begin{center}
-\includegraphics[width=4.66cm]{images/licenses/by-nc.eu}
-\end{center}
-
-\begin{large}
-© Esta obra está bajo una licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional.
-\end{large}
-
-\bigskip
-\bigskip
+\license{images/licenses/by-nc.eu}{© Esta obra está bajo una licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional.}
+    
 \bigskip
 \textcolor{red}{• Si NO quiere permitir que se compartan las adaptaciones de tu obra y quieres permitir usos comerciales de tu obra, indica:}
 
-\begin{center}
-\includegraphics[width=4.66cm]{images/licenses/by-nd}
-\end{center}
+\license{images/licenses/by-nd}{© Esta obra está bajo una licencia de Creative Commons Reconocimiento-SinObraDerivada 4.0 Internacional.}
 
-\begin{large}
-© Esta obra está bajo una licencia de Creative Commons Reconocimiento-SinObraDerivada 4.0 Internacional.
-\end{large}
-
-\bigskip
-\bigskip
 \bigskip
 \textcolor{red}{• Si quiere permitir que se compartan las adaptaciones de tu obra mientras se comparta de la misma manera y quieres permitir usos comerciales de tu obra (licencia de Cultura Libre) indica:}
 
-\begin{center}
-\includegraphics[width=4.66cm]{images/licenses/by-sa}
-\end{center}
+\license{images/licenses/by-sa}{© Esta obra está bajo una licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional.}  
 
-\begin{large}
-© Esta obra está bajo una licencia de Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional.
-\end{large}
-
-\bigskip
-\bigskip
 \bigskip
 \textcolor{red}{• Si quiere permitir que se compartan las adaptaciones de tu obra y quieres permitir usos comerciales de tu obra (licencia de Cultura Libre) indica:}
 
-\begin{center}
-\includegraphics[width=4.66cm]{images/licenses/by}
-\end{center}
-
-\begin{large}
-© Esta obra está bajo una licencia de Creative Commons Reconocimiento 4.0 Internacional.
-\end{large}
+\license{images/licenses/by}{© Esta obra está bajo una licencia de Creative Commons Reconocimiento 4.0 Internacional.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Resumen
@@ -386,18 +352,18 @@ Keyword1, Keyword2, Keyword3,...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
 
-\input{cap1.tex}
-\input{cap2.tex}
-\input{cap3.tex}
-\input{cap4.tex}
-\input{cap5.tex}
-\input{cap6.tex}
-\input{cap7.tex}
+\input{01-introducción}
+\input{02-capítulo2}
+\input{03-capítulo3}
+\input{04-capítulo4}
+\input{05-conclusiones}
+\input{06-conclusions}
+\input{07-presupuesto}
 
 \appendix
 
-\input{apendice1.tex}
-\input{apendice2.tex}
+\input{0A-apéndice1}
+\input{0B-apéndice2}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliografía

@@ -1,16 +1,16 @@
 \chapter{Introducción}
-\label{ch:intro}
+\label{ch:introducción}
 
-\noindent Cualquier capítulo puede tener múltiples apartados, como el \autoref{sec:apartado1} o el \autoref{sec:sección2} de este mismo capítulo.
+Cualquier capítulo puede tener múltiples apartados, como el \autoref{sec:lista_de_items} o el \autoref{sec:enumeraciones} de este mismo capítulo.
 
-También está el \autoref{sec:ch2_1} del \autoref{ch:dos} que tiene la \autoref{fig:other}.
+También está el \autoref{sec:primera_sección} del \autoref{ch:capítulo-dos} que tiene la \autoref{fig:otra}.
 
-Es buena idea usar \verb|\noindent| al principio del primer párrafo, tras el encabezado de una sección o capítulo, para desactivar la sangría temporalmente.
+Se puede utilizar \verb|\indent| o \verb|\noindent| al principio de un párrafo para añadir o eliminar la sangría en el párrafo, respectivamente.
 
 \section{Listas de elementos}
-\label{sec:apartado1}
+\label{sec:lista_de_items}
 
-\noindent Esta la lista de elementos del \autoref{sec:apartado1}:
+Esta es la lista de elementos del \autoref{sec:lista_de_items}:
 
 \begin{itemize}
     \item Item 1
@@ -27,9 +27,9 @@ Es buena idea usar \verb|\noindent| al principio del primer párrafo, tras el en
 \end{itemize}
 
 \section{Enumeraciones}
-\label{sec:sección2}
+\label{sec:enumeraciones}
 
-\noindent Esto es una lista enumerada, que puede estar relacionada con la \autoref{fig:intro}
+Esto es una lista enumerada, que puede estar relacionada con la \autoref{fig:introducción}:
 
 \begin{enumerate}
     \item Item 1
@@ -44,13 +44,13 @@ Es buena idea usar \verb|\noindent| al principio del primer párrafo, tras el en
 
 \section{Figuras y tablas}
 
-\noindent En la \autoref{fig:intro} se puede ver una figura de ejemplo. Las tablas, las figuras y los algoritmos (ver el \autoref{Apendice1:ZZZ}) son flotantes. Esto quiere decir que \LaTeX{} los intentará ubicar en el mejor lugar posible al componer el documento, intentando respetar ciertas reglas tipográficas. Como este lugar puede ser diferente a la posición que realmente ocupan en el texto, \textbf{es importante referenciar en el texto todas las figuras y las tablas}, en los diferentes puntos donde se hable de ellas.
+En la \autoref{fig:introducción} se puede ver una figura de ejemplo. Las tablas, las figuras y los algoritmos (ver el \autoref{sec:algoritmo-zzz}) son flotantes. Esto quiere decir que \LaTeX{} los intentará ubicar en el mejor lugar posible al componer el documento, intentando respetar ciertas reglas tipográficas. Como este lugar puede ser diferente a la posición que realmente ocupan en el texto, \textbf{es importante referenciar en el texto todas las figuras y las tablas}, en los diferentes puntos donde se hable de ellas.
 
 \begin{figure}[htbp]
    \centering
    \includegraphics[width=0.8\linewidth]{images/figura_1}
    \caption{Ejemplo de figura.}
-   \label{fig:intro}
+   \label{fig:introducción}
 \end{figure}
 
 La \autoref{tbl:presupuesto} en el \autoref{ch:presupuesto} es un ejemplo de tabla hecha con el paquete \verb|tabularx|.
@@ -62,22 +62,22 @@ Solo se deben utilizar estos especificadores cuando es absolutamente necesario, 
 
 \section{Código y algoritmos}
 
-\noindent En el \autoref{apx:1} se pueden observar varios ejemplos de entornos para describir algoritmos y código.
+En el \autoref{ch:apéndice-uno} se pueden observar varios ejemplos de entornos para describir algoritmos y código.
 
 \section{Citas}
 
-\noindent Las referencias bibliográficas se deben indicar en el archivo \texttt{references.bib} y se citan en el texto. Las referencias no citadas no aparecerán en el apartado de la bibliografía.
+Las referencias bibliográficas se deben indicar en el archivo \texttt{referencias.bib} y se citan en el texto. Las referencias no citadas no aparecerán en el apartado de la bibliografía.
 
 Las citas pueden ser entre paréntesis \parencite{examplearticle} o \emph{en línea}, como la de \cite{examplegithub}.
 
 Las  reglas para citar \parencite{ulllibguide} permiten citar cualquier cosa: artículos de investigación, libros, entradas de la Wikipedia, blogs, vídeos de Youtube o repositorios de GitHub, entre otros. 
 
-En el \autoref{ch:cuatro} se puede ver otro tipo de citas, usando el paquete \texttt{csquotes}, donde se traslada de forma literal una porción del texto original al documento.
+En el \autoref{ch:capítulo-cuatro} se puede ver otro tipo de cita, usando el paquete \texttt{csquotes}, donde se traslada de forma literal una porción del texto original al documento.
  
 \section{Otra sección...}
 
-\noindent \lipsum[1]
+\lipsum[1]
 
 \subsection{Con subsección...}
 
-\noindent \lipsum[2]
+\lipsum[2]
