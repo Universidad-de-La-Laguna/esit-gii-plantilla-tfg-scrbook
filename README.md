@@ -12,6 +12,10 @@ También se puede descargar la última versión de la plantilla directamente des
 
 https://github.com/Universidad-de-La-Laguna/esit-gii-plantilla-tfg-scrbook
 
+Asi como una versión para escribir en Markdown utilizando [Quarto](https://quarto.org/):
+
+https://github.com/Universidad-de-La-Laguna/esit-gii-plantilla-tfg-quarto
+
 ## LaTeX
 
 La plantilla está prepara para ser usada con LuaLaTex como compilador por defecto y Biber para la gestión de las referencias bibliográficas. Es posible que también funcione con XeLaTeX, pero solo ha sido probada con LuaLaTex. Por eso, para generar este documento, **se recomienda configurar el editor de LaTeX para que use LuaLaTeX**.
