@@ -6,7 +6,7 @@
     draft=false
 }
 
-% % Activar números de línea
+% Activar números de línea
 % \usepackage{lineno}
 % \linenumbers
 % \setlength\linenumbersep{5pt}
@@ -29,12 +29,12 @@
 \usepackage{geometry}
 \geometry{left=2cm, right=2cm, top=2cm, bottom=3.3cm}
 
-% % Interlineado 1.5
+% Interlineado 1.5
 % \onehalfspacing
 
 % Sangría 
 % Ojo, la guía de KOMA-Script sugiere usar espaciado o sangría para delimitar los párrafos,
-% pero no ambas cosas porque es redundante.
+% pero no ambas cosas porque es redundante. Descomentando la siguiente línea se activa la sangría.
 % \setlength{\parindent}{0.5cm}
 
 % Configuración de fuentes
@@ -63,10 +63,14 @@
 \renewcommand{\mkbegdispquote}[2]{«}
 \renewcommand{\mkenddispquote}[2]{#1»#2}
 
-% Bibliografía
-\usepackage[style=apa,sorting=ynt,backend=biber]{biblatex}
-% % Numérica
+%% Bibliografía
+% APA (ordenada por autor, año y título)
+\usepackage[style=apa,sorting=nyt,backend=biber]{biblatex}
+\defbibnote{note}{Las siguientes referencias bibliográficas se presentan en orden alfabético por autor. Las referencias con más de un autor aparecen ordenadas en base al primero de los mismos.\par\bigskip}
+% Numérica (ordenada por orden de aparación)
 % \usepackage[style=numeric-comp,sorting=none,backend=biber]{biblatex}
+% \defbibnote{note}{Las siguientes referencias bibliográficas se presentan en orden de aparición en el texto.\par\bigskip}
+
 \addbibresource{referencias.bib}
 
 \usepackage{caption}
@@ -103,7 +107,7 @@
 % Código con coloreado de sintaxis
 \usepackage{scrhack}            % Para evitar un warning sobre \float@addtolist
 \usepackage{listings}
-\input{settings/listings}          % Estilo y definiciones para lenguajes adicionales
+\input{settings/listings}       % Estilo y definiciones para lenguajes adicionales
 
 % Descripción de algoritmos en pseudocódigo
 \usepackage[chapter]{algorithm}
@@ -370,7 +374,6 @@ Keyword1, Keyword2, Keyword3,...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
 
-\defbibnote{note}{Las siguientes referencias bibliográficas se presentan en orden alfabético por autor. Las referencias con más de un autor aparecen ordenadas en base al primero de los mismos.\par\bigskip}
 \printbibliography[prenote=note]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

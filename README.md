@@ -12,7 +12,7 @@ También se puede descargar la última versión de la plantilla directamente des
 
 https://github.com/Universidad-de-La-Laguna/esit-gii-plantilla-tfg-scrbook
 
-Asi como una versión para escribir en Markdown utilizando [Quarto](https://quarto.org/):
+Así como una versión para escribir en Markdown utilizando [Quarto](https://quarto.org/):
 
 https://github.com/Universidad-de-La-Laguna/esit-gii-plantilla-tfg-quarto
 
