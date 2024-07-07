@@ -22,6 +22,23 @@ La plantilla está prepara para ser usada con LuaLaTex como compilador por defec
 
 La plantilla no funciona con pdfLaTex por el uso del paquete `fontspec` para gestionar las fuentes OpenType.
 
+## Opciones
+
+La plantilla recomienda ciertas opciones del documento, pero también incluye algunas opciones alternativas. Estas alternativas están comentadas para poder activarlas fácilmente.
+
+### Sangría
+
+Por lo general, es recomendable señalar donde comienzan y terminan los párrafos para facilitar la lectura del documento. Esto se puede hacer utilizando espaciado adicional entre los párrafos o añadiendo un espacio a la izquierda de la primera palabra de cada párrafo, lo que recibe el nombre de sangría.
+Incorporar ambas estrategias es redundante, por lo que las guías de estilo hacen mucho hincapié en que solo se debe utilizar una de ellas.
+
+Esta plantilla utiliza solamente el espaciado adicional entre párrafos y se recomienda dejarlo así. Sin embargo, se puede activar también la sangría, descomentando la línea 38 de `memtfg.txt`.
+
+### Cita numérica
+
+El formato de cita configurado por defecto es APA, lo que significa que las citas en el texto se hacen mediante el sistema autor-año y la bibliografía se ordena por autor, año y título. Este sistema facilita identificar a los autores durante la lectura y facilita localizar sus trabajos en la bibliografía, puesto que aparecen juntos. Por tanto, es un sistema interesante en documentos extensos, con un gran número de citas.
+
+Sin embargo, se puede activar fácilmente el sistema de cita numérico comentando las líneas 68-69 y descomentando las líneas 71-72 de `memtfg.txt`.
+
 ## Fuentes
 
 Las fuentes usadas y que deben estar instaladas son:
