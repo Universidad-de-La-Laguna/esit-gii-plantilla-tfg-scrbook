@@ -33,11 +33,11 @@ Incorporar ambas estrategias es redundante, por lo que las guías de estilo hace
 
 Esta plantilla utiliza solamente el espaciado adicional entre párrafos y se recomienda dejarlo así. Sin embargo, se puede activar también la sangría, descomentando la línea 38 de `memtfg.txt`.
 
-### Cita numérica
+### Cita APA
 
-El formato de cita configurado por defecto es APA, lo que significa que las citas en el texto se hacen mediante el sistema autor-año y la bibliografía se ordena por autor, año y título. Este sistema facilita identificar a los autores durante la lectura y facilita localizar sus trabajos en la bibliografía, puesto que aparecen juntos. Por tanto, es un sistema interesante en documentos extensos, con un gran número de citas.
+El formato de cita configurado por defecto es numérico, lo que significa que las citas en el texto se numeran en orden de aparición y que este orden es utilizado también para generar la bibliografía.
 
-Sin embargo, se puede activar fácilmente el sistema de cita numérico comentando las líneas 68-69 y descomentando las líneas 71-72 de `memtfg.txt`.
+Sin embargo, se puede activar fácilmente el sistema de cita APA comentando las líneas 68-69 y descomentando las líneas 71-72 de `memtfg.txt`. En el sistema APA las citas en el texto se hacen mediante autor-año y la bibliografía se ordena por autor, año y título. Este sistema facilita identificar a los autores durante la lectura y localizar sus trabajos en la bibliografía, puesto que aparecen juntos. Por tanto, es un sistema interesante en documentos extensos, con un gran número de citas.
 
 ## Fuentes
 
