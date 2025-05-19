@@ -1,6 +1,6 @@
 # Memoria de trabajo fin de grado
 
-Esta plantilla de memoria de trabajo fin de grado se basa en la clase `scrbook` del paquete [KOMA-Script](https://ctan.org/pkg/koma-script). Este paquete ofrece más flexibilidad en el diseño de documentos y opciones de personalización que las clases estándares de LaTeX.
+Esta plantilla de memoria de trabajo fin de grado se basa en la clase `scrbook` del paquete [KOMA-Script](https://ctan.org/pkg/koma-script). Este paquete ofrece más flexibilidad en el diseño de documentos y opciones de personalización que las clases estándar de LaTeX.
 
 ## Versiones
 
@@ -18,9 +18,7 @@ https://github.com/Universidad-de-La-Laguna/esit-gii-plantilla-tfg-quarto
 
 ## LaTeX
 
-La plantilla está prepara para ser usada con LuaLaTex como compilador por defecto y Biber para la gestión de las referencias bibliográficas. Es posible que también funcione con XeLaTeX, pero solo ha sido probada con LuaLaTex. Por eso, para generar este documento, **se recomienda configurar el editor de LaTeX para que use LuaLaTeX**.
-
-La plantilla no funciona con pdfLaTex por el uso del paquete `fontspec` para gestionar las fuentes OpenType.
+La plantilla está preparada para ser usada con pdfLaTeX como compilador por defecto y Biber para la gestión de las referencias bibliográficas. Es posible que también funcione con XeLaTeX y LuaLaTeX, que son conocidos por ofrecer más flexibilidad en cuanto al uso de fuentes, pero pdfLaTeX es bastante más rápido. Por eso **se recomienda configurar el editor de LaTeX para que use pdfLaTeX** o, en su defecto, XeLaTeX.
 
 ## Opciones
 
@@ -28,8 +26,7 @@ La plantilla recomienda ciertas opciones del documento, pero también incluye al
 
 ### Sangría
 
-Por lo general, es recomendable señalar donde comienzan y terminan los párrafos para facilitar la lectura del documento. Esto se puede hacer utilizando espaciado adicional entre los párrafos o añadiendo un espacio a la izquierda de la primera palabra de cada párrafo, lo que recibe el nombre de sangría.
-Incorporar ambas estrategias es redundante, por lo que las guías de estilo hacen mucho hincapié en que solo se debe utilizar una de ellas.
+Por lo general, es recomendable señalar dónde comienzan y terminan los párrafos para facilitar la lectura del documento. Esto se puede hacer utilizando espaciado adicional entre los párrafos o añadiendo un espacio a la izquierda de la primera palabra de cada párrafo, lo que recibe el nombre de sangría. Incorporar ambas estrategias es redundante, por lo que las guías de estilo hacen mucho hincapié en que solo se debe utilizar una de ellas.
 
 Esta plantilla utiliza solamente el espaciado adicional entre párrafos y se recomienda dejarlo así. Sin embargo, se puede activar también la sangría, descomentando la línea 38 de `memtfg.txt`.
 
@@ -37,7 +34,7 @@ Esta plantilla utiliza solamente el espaciado adicional entre párrafos y se rec
 
 El formato de cita configurado por defecto es numérico, lo que significa que las citas en el texto se numeran en orden de aparición y que este orden es utilizado también para generar la bibliografía.
 
-Sin embargo, se puede activar fácilmente el sistema de cita APA comentando las líneas 68-69 y descomentando las líneas 71-72 de `memtfg.txt`. En el sistema APA las citas en el texto se hacen mediante autor-año y la bibliografía se ordena por autor, año y título. Este sistema facilita identificar a los autores durante la lectura y localizar sus trabajos en la bibliografía, puesto que aparecen juntos. Por tanto, es un sistema interesante en documentos extensos, con un gran número de citas.
+Sin embargo, se puede activar fácilmente el sistema de cita APA comentando las líneas 68-69 y descomentando las líneas 71-72 de `memtfg.txt`. En el sistema APA, las citas en el texto se hacen mediante autor-año y la bibliografía se ordena por autor, año y título. Este sistema facilita identificar a los autores durante la lectura y localizar sus trabajos en la bibliografía, puesto que aparecen juntos. Por tanto, es un sistema interesante en documentos extensos, con un gran número de citas.
 
 ## Fuentes
 
@@ -48,7 +45,7 @@ Las fuentes usadas y que deben estar instaladas son:
 
 ## Paquetes incluidos
 
-Entre otros, la plantilla incluye los siguientes paquetes que pueden ser útiles en la elaboración de la memoria
+Entre otros, la plantilla incluye los siguientes paquetes que pueden ser útiles en la elaboración de la memoria.
 
 ### Código
 
@@ -80,7 +77,7 @@ Entre otros, la plantilla incluye los siguientes paquetes que pueden ser útiles
 
  * [caption](https://ctan.org/pkg/caption) — Proporciona opciones avanzadas para personalizar las leyendas de figuras y tablas. Permite cambiar el estilo, formato y posición de las leyendas.
 
- * [enumitem](https://ctan.org/pkg/enumitem) — Extiende las listas enumeradas y no enumeradas con opciones adicionales. Permite personalizar la numeración, el formato y el espaciado de listas.
+ * [enumitem](https://ctan.org/pkg/enumitem) — Extiende las listas enumeradas y no enumeradas con opciones adicionales. Permite personalizar la numeración, el formato y el espaciado de las listas.
 
  * [subcaption](https://ctan.org/pkg/subcaption) — Proporciona soporte para subtítulos en subfiguras y subtablas. Facilita la creación de figuras y tablas compuestas con leyendas individuales.
 
@@ -88,4 +85,4 @@ Entre otros, la plantilla incluye los siguientes paquetes que pueden ser útiles
 
  * [csquotes](https://ctan.org/pkg/csquotes) — Proporciona comandos avanzados para citar y formatear citas en múltiples lenguajes y estilos.
 
- * [siunitx](https://ctan.org/pkg/siunitx) — Proporciona símbolos utilizados en el sistema internacional de medida, como grados, minutos, segundos, ohmios, kilo, micro, julios y newtons, entre muchos otros.
+ * [siunitx](https://ctan.org/pkg/siunitx) — Proporciona símbolos utilizados en el Sistema Internacional de Medida, como grados, minutos, segundos, ohmios, kilo, micro, julios y newtons, entre muchos otros.

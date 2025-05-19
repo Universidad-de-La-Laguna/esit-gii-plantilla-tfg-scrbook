@@ -6,6 +6,8 @@
     draft=false
 }
 
+\usepackage{iftex}
+
 % Activar números de línea
 % \usepackage{lineno}
 % \linenumbers
@@ -38,19 +40,32 @@
 % \setlength{\parindent}{0.5cm}
 
 % Configuración de fuentes
-\usepackage{fontspec}
-\usepackage{amsmath}
-\usepackage{unicode-math}   % Incluye Latin Modern Math
+\ifPDFTeX
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[scale=0.85]{sourcecodepro}
 
-\setmainfont{Latin Modern Sans}[
-    Ligatures=TeX,
-    % Necesario porque Latin Modern Sans no incluye estilo small caps
-    SmallCapsFont=Latin Modern Roman Caps
-]
-\setsansfont{Latin Modern Sans}[Ligatures=TeX]
-\setmonofont{Source Code Pro}[Scale=MatchLowercase]
-% \setmonofont[Scale=MatchLowercase]{Fira Mono}
-\newfontfamily{\lmromanfont}{Latin Modern Roman}
+    \renewcommand{\familydefault}{\sfdefault}
+    \newcommand{\lmromanfont}{\rmfamily}
+\else % XeLaTeX / LuaLaTeX
+    \usepackage{fontspec}
+    \usepackage{amsmath}
+    \usepackage{unicode-math}   % Incluye Latin Modern Math
+    
+    \setmainfont{Latin Modern Sans}[
+        Ligatures=TeX,
+        % Necesario porque Latin Modern Sans no incluye estilo small caps
+        SmallCapsFont=Latin Modern Roman Caps
+    ]
+    \setsansfont{Latin Modern Sans}[Ligatures=TeX]
+    \setmonofont{Source Code Pro}[Scale=MatchLowercase]
+    % \setmonofont[Scale=MatchLowercase]{Fira Mono}
+    \newfontfamily{\lmromanfont}{Latin Modern Roman}
+\fi
 
 % Configuración de listas no numeradas
 \setkomafont{itemizelabel}{\lmromanfont}
@@ -85,7 +100,12 @@
 \usepackage[table]{xcolor}
 
 \usepackage{siunitx}
-\newcommand{\perthousand}{‰}
+\ifPDFTeX
+    \newcommand{\perthousand}{\textperthousand}
+\else
+    % XeLaTeX / LuaLaTeX
+    \newcommand{\perthousand}{‰}
+\fi
 
 % Tablas
 \usepackage{array} 
